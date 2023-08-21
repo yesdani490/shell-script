@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 echo ''[DHello World, learning DevOps with AWS'
+=======
+echo 'Hello World, learning DevOps with AWS'
+>>>>>>> d332ecaa674656938b3cfc7f77cf06d7c11e8752
