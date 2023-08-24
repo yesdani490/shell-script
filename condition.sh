@@ -1,7 +1,6 @@
 today=$1
 
-if [ today -et "sunday" ] 
-then
+if [ $today == "sunday" ] then
     echo "holiday, enjoy"
 
 else 
