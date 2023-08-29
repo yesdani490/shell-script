@@ -9,7 +9,7 @@ then
 fi
 VALIDATE (){
 
-    if [ $? -ne 0 ]
+    if [ $1 -ne 0 ]
 then 
   echo " Installation  is error "
   exit 1
