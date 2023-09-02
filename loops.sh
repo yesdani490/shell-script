@@ -10,10 +10,10 @@ Y="\e[33m"
 
 VALIDATE(){
     if [ $1 -ne 0 ]
-     then echo -e "$2 is  $R not Successfully $N "
+     then echo -e " $2 is  $R not Successfully $N "
      exit 1
     else
-     echo -e "$2 is installed $G Successfully $N "
+     echo -e " $2 is installed $G Successfully $N "
     fi
 
 }
@@ -26,9 +26,9 @@ for i in $@
     then 
      echo -e " $i is already $Y installed $N "
    else 
-     echo -e " $i is $R not installed $N"
-     echo " lets install $i"
+     echo -e " Package $i is $R not installed $N "
+     echo " lets install  Package $i "
      yum install $i -y &>>$LOGFILE
-     VALIDATE $? "$i"
+     VALIDATE $? " Installation of $i "
   fi
 done 
