@@ -4,7 +4,8 @@
 
  DATE=$(date +%F)
 SCRIPT_NAME=$0
-LOGDIR=/home/centos/shellscrip-logs
+LOGDIR=/home/centos/shellscript-logs
+
 LOGFILE=$LOGDIR/$SCRIPT_NAME-$DATE.log
 
 
