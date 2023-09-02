@@ -42,3 +42,4 @@ else
     # Package is installed
     echo -e "$i is already $Y installed $N"
 fi
+done
