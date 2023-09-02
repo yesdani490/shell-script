@@ -10,7 +10,7 @@ N="\e[0m"
 Y="\e[33m"
 
 VALIDATE(){
-    if [ "$1" != 0 ]
+    if [ "$1" -ne 0 ]
      then echo -e " $2 is  $R not Successfully $N "
     else
      echo -e " $2 is installed $G Successfully $N "
@@ -21,7 +21,7 @@ VALIDATE(){
 
 for i in $@
  do 
- if [ $USERID != 0 ]
+ if [ $USERID -ne 0 ]
 then
    echo " ERROR: please run the script with root access"
    exit 1
