@@ -2,7 +2,7 @@
 DATE=$(date)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME.log
-package_status=$(rpm -qa $i | cut -d'-' -f1 )
+
 R="\e[31m"
 G="\e[32m"
 N="\e[0m" 
@@ -19,8 +19,10 @@ VALIDATE(){
 
 for i in $@
  do 
+  package_status=$(rpm -qa $i | cut -d'-' -f1 )
    if [ $package_status == $i ]
-    then echo -e " $i is already $G installed $N "
+    then 
+     echo -e " $i is already $G installed $N "
    else 
      echo -e " lets install $i"
      yum install $i -y &>>$LOGFILE
