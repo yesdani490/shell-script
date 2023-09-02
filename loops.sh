@@ -1,7 +1,7 @@
 #!/bin/bash
 DATE=$(date)
 SCRIPT_NAME=$0
-LOGFILE=/tmp/$SCRIPT_NAME.log
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 USERID=$(id -u)
 
 R="\e[31m"
@@ -25,7 +25,7 @@ VALIDATE(){
 }
  
 
-for i in $@
+for i in "$@"
  do 
 
   package_status=$(rpm -qa "$i" | cut -d'-' -f1 )
