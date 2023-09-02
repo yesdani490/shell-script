@@ -25,7 +25,7 @@ for i in $@
    then 
      echo -e " Package $i is $R not installed $N "
      echo " lets install  Package $i "
-     yum install $i -y &>>"$LOGFILE"
+     yum install " $i " -y &>>"$LOGFILE"
      echo " $? "
      VALIDATE $? " Installation of $i"
     else
