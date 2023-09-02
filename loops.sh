@@ -8,6 +8,11 @@ R="\e[31m"
 G="\e[32m"
 N="\e[0m" 
 Y="\e[33m"
+if [ $USERID != 0 ]
+then
+   echo " ERROR: please run the script with root access"
+   exit 1
+fi
 
 VALIDATE(){
     if [ "$1" != 0 ]
@@ -17,15 +22,11 @@ VALIDATE(){
     fi
 
 }
-
+ 
 
 for i in $@
  do 
- if [ $USERID != 0 ]
-then
-   echo " ERROR: please run the script with root access"
-   exit 1
-fi
+
   package_status=$(rpm -qa "$i" | cut -d'-' -f1 )
    if [ $package_status != "$i" ]
    then 
