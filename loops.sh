@@ -6,6 +6,7 @@ LOGFILE=/tmp/$SCRIPT_NAME.log
 R="\e[31m"
 G="\e[32m"
 N="\e[0m" 
+Y="\e[33m"
 
 VALIDATE(){
     if [ $1 -ne 0 ]
@@ -23,7 +24,7 @@ for i in $@
   package_status=$(rpm -qa $i | cut -d'-' -f1 )
    if [ $package_status == $i ]
     then 
-     echo -e " $i is already $G installed $N "
+     echo -e " $i is already $Y installed $N "
    else 
      echo -e " $i is $R not installed $N"
      echo " lets install $i"
