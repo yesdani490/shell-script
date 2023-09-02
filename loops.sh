@@ -21,25 +21,25 @@ VALIDATE(){
 for i in $@
  do 
   package_status=$(rpm -qa "$i" | cut -d'-' -f1 )
-#    if [ $package_status != "$i" ]
-#    then 
-#      echo -e " Package $i is $R not installed $N "
-#      echo " lets install  Package $i "
-#      yum install $i -y &>>"$LOGFILE"
-#      VALIDATE $? " Installation of $i"
-#     else
-#       echo -e " $i is already $Y installed $N "
-#   fi
-# done 
-if [ -z "$package_status" ]
-then
-    # Package is not installed
-    echo -e "Package $i is $R not installed $N"
-    echo "Let's install Package $i"
-    yum install $i -y &>>"$LOGFILE"
-    VALIDATE $? "Installation of $i"
-else
-    # Package is installed
-    echo -e "$i is already $Y installed $N"
-fi
-done
+   if [ $package_status != "$i" ]
+   then 
+     echo -e " Package $i is $R not installed $N "
+     echo " lets install  Package $i "
+     yum install $i -y &>>"$LOGFILE"
+     VALIDATE $? " Installation of $i"
+    else
+      echo -e " $i is already $Y installed $N "
+  fi
+done 
+# if [ -z "$package_status" ]
+# then
+#     # Package is not installed
+#     echo -e "Package $i is $R not installed $N"
+#     echo "Let's install Package $i"
+#     yum install $i -y &>>"$LOGFILE"
+#     VALIDATE $? "Installation of $i"
+# else
+#     # Package is installed
+#     echo -e "$i is already $Y installed $N"
+# fi
+# done
