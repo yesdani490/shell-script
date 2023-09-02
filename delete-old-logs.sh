@@ -4,7 +4,8 @@
 
  DATE=$(date +%F)
 SCRIPT_NAME=$0
-LOGFILE=/home/centos/$SCRIPT_NAME-$DATE.log
+LOGDIR=/home/centos/shellscrip-logs
+LOGFILE=$LOGDIR/$SCRIPT_NAME-$DATE.log
 
 
 FILES_TO_DELETE=$(find  $APP_LOGS -name "*.log" -type f -mtime +15)
