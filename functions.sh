@@ -1,5 +1,5 @@
 #!/bin/bash
-DATE=$(dATE)
+DATE=$(date)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME.log
 
