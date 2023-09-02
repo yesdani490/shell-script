@@ -20,6 +20,11 @@ VALIDATE(){
 
 for i in $@
  do 
+ if [ $USERID -ne 0 ]
+then
+   echo " ERROR: please run the script with root access"
+   exit 1
+fi
   package_status=$(rpm -qa "$i" | cut -d'-' -f1 )
    if [ $package_status != "$i" ]
    then 
