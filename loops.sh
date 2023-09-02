@@ -25,7 +25,8 @@ for i in $@
     then 
      echo -e " $i is already $G installed $N "
    else 
-     echo -e " lets install $i"
+     echo -e " $i is $R not installed $N"
+     echo " lets install $i"
      yum install $i -y &>>$LOGFILE
      VALIDATE $? "$i"
   fi
