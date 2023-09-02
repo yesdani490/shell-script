@@ -2,6 +2,7 @@
 DATE=$(date)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME.log
+USERID=$(id -u)
 
 R="\e[31m"
 G="\e[32m"
@@ -20,7 +21,7 @@ VALIDATE(){
 
 for i in $@
  do 
- if [ $USERID -ne 0 ]
+ if [ $USERID != 0 ]
 then
    echo " ERROR: please run the script with root access"
    exit 1
