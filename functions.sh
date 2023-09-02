@@ -3,14 +3,17 @@ DATE=$(date)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME.log
 
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
 VALIDATE (){
 
     if [ $1 -ne 0 ]
 then 
-  echo " $2  is error "
+  echo -e " $2  is $R error $N "
   exit 1
  else
- echo " $2 is success "
+ echo " $2 is $G success $N "
 fi
 }
 USERID=$(id -u)
