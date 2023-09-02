@@ -15,8 +15,9 @@ then
 fi
 
 VALIDATE(){
-    if [ "$1" != 0 ]
+    if [ "$1" -ne 0 ]
      then echo -e " $2 is  $R not Successfully $N "
+     exit 1
     else
      echo -e " $2 is installed $G Successfully $N "
     fi
@@ -28,7 +29,7 @@ for i in $@
  do 
 
   package_status=$(rpm -qa "$i" | cut -d'-' -f1 )
-   if [ $package_status != "$i" ]
+   if [ $package_status -ne "$i" ]
    then 
      echo -e " Package $i is $R not installed $N "
      echo " lets install  Package $i "
