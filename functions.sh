@@ -10,10 +10,10 @@ VALIDATE (){
 
     if [ $1 -ne 0 ]
 then 
-  echo -e " $2  is $R error $N "
-  exit 1
+    echo -e " $2  is $R error $N "
+    exit 1
  else
- echo " $2 is $G success $N "
+    echo -e " $2 is $G success $N "
 fi
 }
 USERID=$(id -u)
