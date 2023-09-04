@@ -7,7 +7,7 @@ echo "Entered word is: $WORD"
 
 REVWORD=$( echo "$WORD" | rev )
 
-if ($WORD !ne $REVWORD)
+if ( $WORD !ne $REVWORD )
 then
 
   echo " $WORD is not palindrom"
