@@ -1,6 +1,6 @@
 #!/bin/bash
-
-INPUTFILE=$1
+echo "Enter the file characters to be reversed"
+read INPUTFILE
 
 REVSTRING=$( $INPUTFILE | rev )
 
