@@ -22,7 +22,7 @@
   
    if [ $usage -gt $DISK_USAGE_THRESHOLD ]
    then 
-     message+="High Disk Usage on $partition:$usage"
+     message+="High Disk Usage on $partition:$usage /n"
     fi
  done  <<< $DISK_USAGE
 
