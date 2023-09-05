@@ -17,6 +17,9 @@
  while IFS= read line
  do
    usage=$(echo $line | awk '{print $6f}'| cut -d % -f1)
+   partition=$(echo $line | awk '{print $1f}')
    echo $usage
+   echo $partition
+
  done  <<< $DISK_USAGE
 
