@@ -4,10 +4,10 @@ LOGFILE_DIRECTORY=/tmp
 LOGFILE=$LOGFILE_DIRECTORY/$SCRIPT_NAME-$DATE.log
 DATE=$(date +%F:%H:%M:%S)
 
-R="\e[31m"
-G="\e[32m"
-N="\e[0m" 
-Y="\e[33m"
+# R="\e[31m"
+# G="\e[32m"
+# N="\e[0m" 
+# Y="\e[33m"
 
  DISK_USAGE=$(df -hT  | grep -vE 'tmpfs|Filesystem' )
 
@@ -16,7 +16,7 @@ Y="\e[33m"
 
  while IFS= read line
  do
-   echo "output: $line"
-
+   echo "output: $line" >> $LOGFILE
+   echo $DISK_USAGE_THRESHOLD
  done  <<< $DISK_USAGE
 
