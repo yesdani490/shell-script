@@ -28,4 +28,4 @@
 
 echo -e "message: $message"
 
-echo "$message $(date)" | mail -s "High Disk Usage" info@joindevops.com
+echo "$message $(date)" | mail -s "High Disk Usage" yesdaniece@gmail.com
