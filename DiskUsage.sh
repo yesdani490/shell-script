@@ -27,3 +27,5 @@
  done  <<< $DISK_USAGE
 
 echo -e "message: $message"
+
+echo "$message $(date)" | mail -s "High Disk Usage" info@joindevops.com
