@@ -16,7 +16,8 @@ DATE=$(date +%F:%H:%M:%S)
 
  while IFS= read line
  do
-   echo "output: $line" >> $LOGFILE
+   echo "output: $line" 
    echo $DISK_USAGE_THRESHOLD
+   echo $LOGFILE
  done  <<< $DISK_USAGE
 
