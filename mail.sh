@@ -2,7 +2,13 @@
  TO_ADDRESS=$1
  SUBJECT=$2
  #BODY=$(sed -e 's/[]\/$*.^[]/\\&/g' <<< $3)
- BODY=$(echo "$3" | sed 's/[][\/$*.^[]/\\&/g')
+ #BODY=$(echo "$3" | sed 's/[][\/$*.^[]/\\&/g')
+
+ BODY="$3"  # Assign the entire message to BODY
+
+# Use BODY in the sed expression, escaping any special characters
+BODY=$(echo "$BODY" | sed 's/[][\/$*.^[]/\\&/g')
+
 
  TEAM_NAME=$4
  ALERT_TYPE=$5
