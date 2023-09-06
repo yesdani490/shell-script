@@ -1,2 +1,2 @@
 #!/bin/bash
-echo " Hello World, learning DevOps with AWS "
+echo "Hello World, learning DevOps with AWS"
