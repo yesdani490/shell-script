@@ -24,7 +24,7 @@
    then 
      message+="High Disk Usage on $partition:$usage \n"
     fi
- done  <<< $DISK_USAGE
+ done  <<< "$DISK_USAGE"
 
 echo -e "message: $message"
 
@@ -32,4 +32,4 @@ sh
 
 #echo "$message $(date)" | mail -s "High Disk Usage" yesdaniece@gmail.com
 
-mail.sh yesdaniece@gmail.com "High Disk Usage" "$message" "DevOps Team" "High Disk Usage"
+sh mail.sh yesdaniece@gmail.com "High Disk Usage" "$message" "DevOps Team" "High Disk Usage"
