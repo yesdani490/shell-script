@@ -2,9 +2,6 @@
  TO_ADDRESS=$1
  SUBJECT=$2
  BODY=$(echo "$3" | sed -e 's|[]\/$*.^[]|\\&|g')
-
-
- echo "$BODY"
  TEAM_NAME=$4
  ALERT_TYPE=$5
 
