@@ -28,4 +28,8 @@
 
 echo -e "message: $message"
 
-echo "$message $(date)" | mail -s "High Disk Usage" yesdaniece@gmail.com
+sh 
+
+#echo "$message $(date)" | mail -s "High Disk Usage" yesdaniece@gmail.com
+
+sh mail.sh yesdaniece@gmail.com "High Disk Usage" $message "DevOps Team" "High Disk Usage"
