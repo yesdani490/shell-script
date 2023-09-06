@@ -1,8 +1,8 @@
 #!/bin/bash
  TO_ADDRESS=$1
  SUBJECT=$2
- BODY=$(sed -e 's/[]\/$*.^[]/\\&/g' <<< $3)
- 
+ #BODY=$(sed -e 's/[]\/$*.^[]/\\&/g' <<< $3)
+ BODY=$3
  
  TEAM_NAME=$4
  ALERT_TYPE=$5
