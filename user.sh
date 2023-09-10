@@ -11,7 +11,7 @@ if [ $? -eq 0 ]; then
   exit 1
 else
   echo "User '$USERNAME' does not exist ."
-  useradd $USERNAME
+  sudo useradd $USERNAME
 fi
 
 echo "username  is:"$USERNAME
