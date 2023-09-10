@@ -8,6 +8,7 @@ id "$USERNAME"
 # Check the exit status of the 'id' command
 if [ $? -eq 0 ]; then
   echo "User '$USERNAME' exists."
+  exit 1
 else
   echo "User '$USERNAME' does not exist ."
   useradd $USERNAME
