@@ -15,3 +15,15 @@ else
 fi
 
 echo "username added is:"$USERNAME
+
+echo "Enter Directory name"
+read directory
+# Check if the directory already exists
+if [ -d "$directory" ]; then
+  echo "The directory '$directory' already exists."
+  exit 1
+else
+  # If it doesn't exist, create the directory
+  mkdir -p "$directory"
+ 
+fi
