@@ -25,5 +25,7 @@ if [ -d "$directory" ]; then
 else
   # If it doesn't exist, create the directory
   sudo mkdir -p "$directory"
+
+  echo "Directory created: $directory"
  
 fi
