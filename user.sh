@@ -10,8 +10,8 @@ if [ $? -eq 0 ]; then
   echo "User '$USERNAME' exists."
   exit 1
 else
-  echo "User '$USERNAME' does not exist ."
+  echo "User '$USERNAME' does not exist so adding user."
   sudo useradd $USERNAME
 fi
 
-echo "username  is:"$USERNAME
+echo "username added is:"$USERNAME
