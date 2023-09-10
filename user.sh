@@ -24,6 +24,6 @@ if [ -d "$directory" ]; then
   exit 1
 else
   # If it doesn't exist, create the directory
-  mkdir -p "$directory"
+  sudo mkdir -p "$directory"
  
 fi
